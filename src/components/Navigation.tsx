@@ -38,7 +38,7 @@ export function SecretHeart() {
             onClick={() => setShowMessage(false)}
           >
             <motion.div
-              className="bg-white rounded-3xl p-8 max-w-md text-center"
+              className="bg-white rounded-3xl p-8 sm:p-10 border border-blush/40 max-w-md text-center m-4"
               style={{ boxShadow: '0 30px 80px rgba(125, 41, 74, 0.2)' }}
               initial={{ scale: 0.8, y: 20 }}
               animate={{ scale: 1, y: 0 }}
@@ -52,7 +52,7 @@ export function SecretHeart() {
               >
                 💗
               </motion.div>
-              <p className="text-romantic text-xl text-burgundy italic leading-relaxed">
+              <p className="text-romantic text-xl text-burgundy italic leading-relaxed px-2 sm:px-4">
                 {config.secretHeartMessage}
               </p>
               <button

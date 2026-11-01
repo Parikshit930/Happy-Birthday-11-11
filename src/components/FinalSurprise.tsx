@@ -11,7 +11,7 @@ export default function FinalSurprise({ onReplay }: FinalSurpriseProps) {
   const [ref, isInView] = useInView(0.1);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 md:px-16 py-24 md:py-36 overflow-hidden w-full min-w-full">
       {/* Deep romantic background */}
       <div
         className="absolute inset-0 animate-gradient"
@@ -96,7 +96,7 @@ export default function FinalSurprise({ onReplay }: FinalSurpriseProps) {
       {/* Content */}
       <motion.div
         ref={ref}
-        className="relative z-10 text-center max-w-3xl mx-auto"
+        className="relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center justify-center w-full"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1 }}
@@ -112,7 +112,7 @@ export default function FinalSurprise({ onReplay }: FinalSurpriseProps) {
         </motion.p>
 
         <motion.h2
-          className="text-display text-3xl md:text-5xl text-white mb-8"
+          className="text-display text-3xl md:text-5xl text-white mb-8 px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5 }}
@@ -121,7 +121,7 @@ export default function FinalSurprise({ onReplay }: FinalSurpriseProps) {
         </motion.h2>
 
         <motion.p
-          className="text-romantic text-xl md:text-2xl text-white/90 italic leading-relaxed mb-10 max-w-2xl mx-auto"
+          className="text-romantic text-xl md:text-2xl text-white/90 italic leading-relaxed mb-10 max-w-2xl mx-auto px-4 sm:px-6"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8 }}
@@ -131,17 +131,18 @@ export default function FinalSurprise({ onReplay }: FinalSurpriseProps) {
 
         {/* Photo */}
         <motion.div
-          className="mx-auto mb-10 w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden"
+          className="mx-auto mb-10 w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full overflow-hidden"
           style={{
-            border: '3px solid rgba(255, 255, 255, 0.3)',
-            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.2)',
+            border: '4px solid rgba(255, 255, 255, 0.45)',
+            boxShadow: '0 25px 70px rgba(0, 0, 0, 0.35), 0 0 40px rgba(244, 167, 193, 0.25)',
           }}
           initial={{ scale: 0, opacity: 0 }}
           animate={isInView ? { scale: 1, opacity: 1 } : {}}
           transition={{ delay: 1, type: 'spring', stiffness: 50 }}
+          whileHover={{ scale: 1.05 }}
         >
-          {config.heroPhoto ? (
-            <img src={config.heroPhoto} alt={config.herName} className="w-full h-full object-cover" />
+          {config.finalPhoto ? (
+            <img src={config.finalPhoto} alt="Our Special Hug" className="w-full h-full object-cover object-center" />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-white/20 to-white/5">
               <span className="text-5xl">🌸</span>
@@ -150,7 +151,7 @@ export default function FinalSurprise({ onReplay }: FinalSurpriseProps) {
         </motion.div>
 
         <motion.h2
-          className="text-handwritten text-4xl md:text-5xl text-white mb-12"
+          className="text-handwritten text-4xl md:text-5xl text-white mb-12 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.3 }}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import IntroScreen from './components/IntroScreen';
+import LockScreen from './components/LockScreen';
 import Hero from './components/Hero';
 import StoryTimeline from './components/StoryTimeline';
 import MemoryGallery from './components/MemoryGallery';
@@ -19,34 +19,40 @@ import SparkleTrail from './components/SparkleTrail';
 import { useAudio } from './hooks/useHooks';
 
 function App() {
-  const [introComplete, setIntroComplete] = useState(false);
+  const [isUnlocked, setIsUnlocked] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const audio = useAudio();
 
   useEffect(() => {
     audio.initAudio();
-  }, []);
+  }, [audio]);
 
-  const handleIntroComplete = () => {
-    setIntroComplete(true);
-    // Start audio on user interaction (respects autoplay policy)
+  const handleUnlock = () => {
+    setIsUnlocked(true);
+    // Start audio immediately upon unlocking
     audio.play();
-    setTimeout(() => setShowContent(true), 500);
+    setShowContent(true);
   };
 
   const handleReplay = () => {
     setShowContent(false);
     setTimeout(() => {
-      setIntroComplete(false);
+      setIsUnlocked(false);
     }, 300);
   };
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-cream film-grain">
-      {/* Intro Screen */}
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-cream film-grain flex flex-col items-center justify-start">
+      {/* Background audio element anchored directly in DOM */}
+      <audio id="birthday-bg-music" src="/audio/music.mp3" loop preload="auto" playsInline />
+
+      {/* Floating music controller is ALWAYS available across the entire journey */}
+      <MusicController audioHook={audio} />
+
+      {/* Lock Screen with Passcode 1111 */}
       <AnimatePresence>
-        {!introComplete && (
-          <IntroScreen onComplete={handleIntroComplete} />
+        {!isUnlocked && (
+          <LockScreen onUnlock={handleUnlock} onStartMusic={() => audio.play()} />
         )}
       </AnimatePresence>
 
@@ -54,74 +60,83 @@ function App() {
       <AnimatePresence>
         {showContent && (
           <motion.div
+            className="w-full flex flex-col items-center justify-start"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            {/* Persistent effects */}
+            {/* Persistent background effects */}
             <PetalAnimation />
-            <MusicController audioHook={audio} />
             <SecretHeart />
             <Navigation />
             <ClickHearts />
             <ScrollToTop />
             <SparkleTrail />
 
-            {/* Sections */}
-            <div id="hero">
+            {/* Sections — Full width backgrounds with centered content */}
+            <div id="hero" className="w-full">
               <Hero />
             </div>
 
-            {/* Section divider */}
             <SectionDivider />
 
-            <div id="story">
+            <div id="story" className="w-full">
               <StoryTimeline />
             </div>
 
             <SectionDivider />
 
-            <div id="memories">
+            <div id="memories" className="w-full">
               <MemoryGallery />
             </div>
 
             <SectionDivider />
 
-            <div id="letter">
+            <div id="letter" className="w-full">
               <LoveLetter />
             </div>
 
             <SectionDivider />
 
-            <div id="quiz">
+            <div id="quiz" className="w-full">
               <LoveQuiz />
             </div>
 
             <SectionDivider />
 
-            <div id="cake">
+            <div id="cake" className="w-full">
               <BirthdayCake />
             </div>
 
             <SectionDivider />
 
-            <ReasonsILoveYou />
+            <div id="reasons" className="w-full">
+              <ReasonsILoveYou />
+            </div>
 
             <SectionDivider />
 
-            <RoseGarden />
+            <div id="garden" className="w-full">
+              <RoseGarden />
+            </div>
 
             <SectionDivider />
 
-            <HiddenSurprise />
+            <div id="surprise" className="w-full">
+              <HiddenSurprise />
+            </div>
 
             <SectionDivider />
 
-            <BucketList />
+            <div id="bucketlist" className="w-full">
+              <BucketList />
+            </div>
 
             <SectionDivider />
 
-            <FinalSurprise onReplay={handleReplay} />
+            <div id="final" className="w-full">
+              <FinalSurprise onReplay={handleReplay} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -131,10 +146,10 @@ function App() {
 
 function SectionDivider() {
   return (
-    <div className="relative py-8 flex items-center justify-center">
-      <div className="w-32 h-px bg-gradient-to-r from-transparent via-rose-soft/40 to-transparent" />
-      <span className="mx-4 text-rose-soft/60 text-sm">✦</span>
-      <div className="w-32 h-px bg-gradient-to-r from-transparent via-rose-soft/40 to-transparent" />
+    <div className="relative py-6 flex items-center justify-center w-full">
+      <div className="w-36 sm:w-56 md:w-72 h-px bg-gradient-to-r from-transparent via-rose-soft/40 to-transparent" />
+      <span className="mx-4 text-rose-soft/70 text-sm">✦</span>
+      <div className="w-36 sm:w-56 md:w-72 h-px bg-gradient-to-r from-transparent via-rose-soft/40 to-transparent" />
     </div>
   );
 }

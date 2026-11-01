@@ -21,7 +21,7 @@ export default function RoseGarden() {
   };
 
   return (
-    <section className="relative py-20 md:py-32 px-4 overflow-hidden">
+    <section className="relative py-24 md:py-36 px-6 sm:px-10 md:px-16 overflow-hidden flex flex-col items-center justify-center w-full min-w-full">
       {/* Dreamy background */}
       <div
         className="absolute inset-0"
@@ -47,7 +47,7 @@ export default function RoseGarden() {
         </motion.div>
       ))}
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center w-full">
         {/* Header */}
         <motion.div
           ref={ref}
@@ -117,10 +117,10 @@ export default function RoseGarden() {
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              className="mt-6 p-6 rounded-2xl bg-white/80 backdrop-blur-sm max-w-md mx-auto"
+              className="mt-6 p-6 sm:p-8 rounded-3xl bg-white/90 backdrop-blur-sm border border-blush/40 max-w-lg mx-auto"
               style={{ boxShadow: '0 20px 60px rgba(244, 167, 193, 0.2)' }}
             >
-              <p className="text-handwritten text-2xl text-burgundy">
+              <p className="text-handwritten text-2xl sm:text-3xl text-burgundy px-2 sm:px-4 leading-relaxed">
                 "Every flower here is beautiful, but none of them could ever compete with the person reading this."
               </p>
             </motion.div>

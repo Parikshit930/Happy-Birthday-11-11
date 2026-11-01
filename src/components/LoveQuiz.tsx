@@ -61,10 +61,10 @@ export default function LoveQuiz() {
   };
 
   return (
-    <section className="relative py-20 md:py-32 px-4 overflow-hidden">
+    <section className="relative py-24 md:py-36 px-6 sm:px-10 md:px-16 overflow-hidden flex flex-col items-center justify-center w-full min-w-full">
       <div className="absolute inset-0 bg-gradient-to-b from-cream via-champagne/20 to-cream" />
 
-      <div className="relative z-10 max-w-2xl mx-auto">
+      <div className="relative z-10 max-w-2xl mx-auto text-center flex flex-col items-center justify-center w-full">
         {/* Header */}
         <motion.div
           ref={ref}
@@ -86,7 +86,7 @@ export default function LoveQuiz() {
           {!showResult ? (
             <motion.div
               key={`q-${currentQ}`}
-              className="bg-white rounded-3xl p-6 md:p-10 shadow-xl"
+              className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl"
               style={{ border: '1px solid rgba(244, 167, 193, 0.3)' }}
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -111,7 +111,7 @@ export default function LoveQuiz() {
               </div>
 
               {/* Question */}
-              <h3 className="text-display text-xl md:text-2xl text-burgundy mb-8 text-center">
+              <h3 className="text-display text-xl md:text-2xl text-burgundy mb-8 text-center px-2 sm:px-6">
                 {question.question}
               </h3>
 
@@ -132,7 +132,7 @@ export default function LoveQuiz() {
                   return (
                     <motion.button
                       key={i}
-                      className={`w-full p-4 rounded-2xl text-left transition-all duration-300 border-2 ${btnClass} ${
+                      className={`w-full p-4 sm:p-5 px-5 sm:px-6 rounded-2xl text-left transition-all duration-300 border-2 ${btnClass} ${
                         !answered ? 'border-transparent hover:border-rose-soft' : 'border-transparent'
                       }`}
                       onClick={() => handleAnswer(i)}
@@ -185,7 +185,7 @@ export default function LoveQuiz() {
             /* Result */
             <motion.div
               key="result"
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl text-center"
+              className="bg-white rounded-3xl p-8 sm:p-12 md:p-16 shadow-xl text-center"
               style={{ border: '1px solid rgba(244, 167, 193, 0.3)' }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -199,7 +199,7 @@ export default function LoveQuiz() {
                 {score >= total * 0.7 ? '🎉' : score >= total * 0.4 ? '💕' : '🌸'}
               </motion.div>
 
-              <h3 className="text-display text-2xl md:text-3xl text-burgundy mb-4">
+              <h3 className="text-display text-2xl md:text-3xl text-burgundy mb-4 px-2 sm:px-6">
                 {score >= total * 0.7
                   ? "Looks like someone knows our little world pretty well."
                   : score >= total * 0.4

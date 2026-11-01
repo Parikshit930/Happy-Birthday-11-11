@@ -8,8 +8,8 @@
 
 export const config = {
   // ── PERSONAL INFORMATION ──
-  herName: "Her Name",
-  herNickname: "Beautiful",
+  herName: "Disha",
+  herNickname: "Dishu",
   birthday: "2005-11-11", // YYYY-MM-DD format
   birthdayMonth: 11, // November
   birthdayDay: 11,
@@ -17,72 +17,122 @@ export const config = {
   relationship: "Someone who loves you deeply",
 
   // ── HERO SECTION ──
-  heroHeading: "Happy Birthday, Beautiful.",
-  heroSubheading: "Today, the universe has one more reason to celebrate.",
-  heroMessage: "If I could choose one beautiful moment to relive, I'd probably choose the moment life brought you into my world.",
-  heroPhoto: "", // Replace with path to her photo (e.g., "/images/her.jpg")
+  heroHeading: "Happy Birthday Baby ❤️",
+  heroSubheading: "Today, the universe has one more reason to celebrate you.",
+  heroMessage: "If I could choose one beautiful moment to relive, I'd choose the moment life brought you into my world.",
+  heroPhoto: "/images/couple-selfie.jpg", // Her photo path
 
   // ── STORY TIMELINE ──
-  // Replace these with your actual memories
   timeline: [
     {
       chapter: "01",
-      title: "The Beginning",
-      date: "[Date placeholder]",
-      message: "Every beautiful story has a beginning. Ours started in the most unexpected way — and somehow, it felt like it was always meant to be.",
-      photo: "", // Replace with photo path
+      title: "Cafe Dates & Stealing Smiles",
+      date: "Cozy Cafe Moments",
+      message: "Sitting across from you over cups of tea and coffee, just watching you smile and talk. In that simple cafe corner, the world faded into the background, and I knew every moment with you was something special.",
+      photo: "/images/cafe-date.jpg",
     },
     {
       chapter: "02",
-      title: "The First Conversation",
-      date: "[Date placeholder]",
-      message: "I still remember how our first conversation felt. There was something about it that made everything else fade into the background.",
-      photo: "",
+      title: "My Safe Place in Your Hands",
+      date: "On The Journey",
+      message: "Miles passing by outside the window, quiet comforting conversations, and your hand resting gently in mine. No matter where the road takes us, holding your hand is my comfort and my safest home.",
+      photo: "/images/holding-hands.jpg",
     },
     {
       chapter: "03",
-      title: "The Little Things",
-      date: "[Date placeholder]",
-      message: "It wasn't just the big moments. It was the little things — the way you'd say good morning, the tiny jokes, the random messages that made my day.",
-      photo: "",
+      title: "Wind in Our Hair & Bike Rides",
+      date: "On Two Wheels",
+      message: "Helmet on, road ahead, and you right with me clicking the cutest selfies with heart filters. Those spontaneous rides with you are my absolute favorite kind of adventure.",
+      photo: "/images/bike-ride.jpg",
     },
     {
       chapter: "04",
-      title: "The Memories I Keep Replaying",
-      date: "[Date placeholder]",
-      message: "Some moments stay with you forever. The ones that make you smile at 2 AM when the world is quiet and your mind wanders back to something beautiful.",
-      photo: "",
+      title: "Our Goofy, Crazy Side",
+      date: "Unfiltered Joy",
+      message: "Putting on silly cat glasses, laughing until our stomachs hurt. With you, I never have to pretend — you match my weirdness and turn every single second into pure happiness.",
+      photo: "/images/goofy-filter-1.jpg",
     },
     {
       chapter: "05",
-      title: "The Moments That Made Me Smile",
-      date: "[Date placeholder]",
-      message: "You have this incredible ability to turn ordinary moments into something I'd want to remember forever. I hope you know that.",
-      photo: "",
+      title: "Smiles That Light Up Everything",
+      date: "Pure Laughter",
+      message: "Those candid moments where we just couldn't keep a straight face. You're not just my girl, you're my best friend and favorite person to laugh with.",
+      photo: "/images/goofy-filter-2.jpg",
     },
     {
       chapter: "06",
-      title: "Everything Still Waiting To Happen",
-      date: "The Future",
-      message: "This chapter isn't written yet. But I know it's going to be beautiful — because you'll be in it.",
-      photo: "",
+      title: "BroCode Wine & Warmest Hugs",
+      date: "An Unforgettable Night",
+      message: "The night we tried BroCode wine together for the first time. I don't drink at all, but with you by my side, I did — and it turned out to be the best drink of my life. Sitting wrapped in your arms, everything felt completely magical and peaceful.",
+      photo: "/images/bro-code-hug.jpg",
+    },
+    {
+      chapter: "07",
+      title: "You & Me, Always & Forever",
+      date: "My Whole World",
+      message: "Side by side, with that radiant smile and your Disha necklace shining close to your heart. Every single picture of us tells a story of pure love, warmth, and a lifetime still to celebrate.",
+      photo: "/images/couple-selfie.jpg",
     },
   ],
 
   // ── MEMORY GALLERY ──
   memories: [
-    { id: 1, src: "", caption: "Replace with a memory", category: "favourites", date: "", whySpecial: "This picture is special because... [add your reason]" },
-    { id: 2, src: "", caption: "Replace with a memory", category: "together", date: "", whySpecial: "This one always makes me smile because..." },
-    { id: 3, src: "", caption: "Replace with a memory", category: "random", date: "", whySpecial: "The moment this was taken was..." },
-    { id: 4, src: "", caption: "Replace with a memory", category: "favourites", date: "", whySpecial: "I love this because..." },
-    { id: 5, src: "", caption: "Replace with a memory", category: "together", date: "", whySpecial: "This reminds me of..." },
-    { id: 6, src: "", caption: "Replace with a memory", category: "unforgettable", date: "", whySpecial: "I never want to forget this because..." },
-    { id: 7, src: "", caption: "Replace with a memory", category: "smile", date: "", whySpecial: "Every time I see this, I..." },
-    { id: 8, src: "", caption: "Replace with a memory", category: "favourites", date: "", whySpecial: "This one holds a special place because..." },
-    { id: 9, src: "", caption: "Replace with a memory", category: "together", date: "", whySpecial: "The story behind this is..." },
-    { id: 10, src: "", caption: "Replace with a memory", category: "random", date: "", whySpecial: "This makes me happy because..." },
-    { id: 11, src: "", caption: "Replace with a memory", category: "unforgettable", date: "", whySpecial: "This moment was..." },
-    { id: 12, src: "", caption: "Replace with a memory", category: "smile", date: "", whySpecial: "I keep coming back to this because..." },
+    {
+      id: 1,
+      src: "/images/bro-code-hug.jpg",
+      caption: "BroCode Wine & Warmest Hugs 🍷♡",
+      category: "unforgettable",
+      date: "The BroCode Night",
+      whySpecial: "The very first time we tried BroCode wine together. I don't drink, but with you I did, and it became the best drink of my life. Wrapping my arms around you and holding you close like this made the whole world stop."
+    },
+    {
+      id: 2,
+      src: "/images/couple-selfie.jpg",
+      caption: "You & Me, Always ♡",
+      category: "favourites",
+      date: "Our Beautiful Days",
+      whySpecial: "Just look at that radiant smile and your Disha necklace. Every single time I look at this picture, I fall in love with you all over again."
+    },
+    {
+      id: 3,
+      src: "/images/bike-ride.jpg",
+      caption: "Spontaneous Bike Rides & Hearts 🏍️✨",
+      category: "together",
+      date: "On Two Wheels",
+      whySpecial: "You glowing in red with cute heart filters, me in my helmet, and the open road. No matter where we ride, having you with me makes every journey unforgettable."
+    },
+    {
+      id: 4,
+      src: "/images/cafe-date.jpg",
+      caption: "Coffee, Cozy Corners & Stealing Smiles",
+      category: "together",
+      date: "Cozy Cafe Date",
+      whySpecial: "Sitting across from you, talking about everything and nothing. Stealing smiles between sips while the rest of the world faded into background noise."
+    },
+    {
+      id: 5,
+      src: "/images/holding-hands.jpg",
+      caption: "My Safe Place in Your Hands",
+      category: "unforgettable",
+      date: "Travel Journey",
+      whySpecial: "Your fingers gently wrapped around my hand. In that simple, gentle touch during our journey, I found a peace and warmth that nothing else could ever replace."
+    },
+    {
+      id: 6,
+      src: "/images/goofy-filter-1.jpg",
+      caption: "Cat Glasses & Endless Giggles 🐱👓",
+      category: "smile",
+      date: "Goofy Moments",
+      whySpecial: "Who else could be this adorable and hilarious at the same time? One of my absolute favourite moments because your laugh is pure magic."
+    },
+    {
+      id: 7,
+      src: "/images/goofy-filter-2.jpg",
+      caption: "Double Trouble & Matching Crazy",
+      category: "random",
+      date: "Pure Fun",
+      whySpecial: "We don't need fancy plans to have the best time ever — just you, me, and our weird goofy energy making memories."
+    },
   ],
 
   // ── LOVE LETTER ──
@@ -213,6 +263,7 @@ Happy Birthday, beautiful. Today and every day after, I hope you feel even half 
   secretHeartMessage: "You found my secret heart. Five clicks for five reasons I think about you every single day. But honestly? There are a million more.",
 
   // ── FINAL MESSAGE ──
+  finalPhoto: "/images/bro-code-hug.jpg", // The special hug picture
   finalMessage1: "I don't know what the future has written for us, but I know that today deserves to be celebrated because the world became a little more beautiful on the day you were born.",
   finalMessage2: "Happy Birthday, My Favourite Human.",
 };

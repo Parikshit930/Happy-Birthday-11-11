@@ -40,7 +40,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-10 md:px-16 py-24 md:py-32 w-full min-w-full">
       {/* Animated gradient background */}
       <div
         className="absolute inset-0 animate-gradient"
@@ -76,7 +76,7 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <div className="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center justify-center w-full">
         {/* Photo frame */}
         <motion.div
           className="mx-auto mb-10 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden"
@@ -110,7 +110,7 @@ export default function Hero() {
 
         {/* Main heading */}
         <motion.h1
-          className="text-display text-4xl md:text-6xl lg:text-7xl text-burgundy mb-6 leading-tight"
+          className="text-display text-4xl md:text-6xl lg:text-7xl text-burgundy mb-6 leading-tight px-4 sm:px-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -120,7 +120,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <motion.p
-          className="text-romantic text-xl md:text-2xl text-dusty-pink mb-8 italic"
+          className="text-romantic text-xl md:text-2xl text-dusty-pink mb-8 italic px-4 sm:px-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
@@ -168,7 +168,7 @@ export default function Hero() {
 
         {/* Handwritten message */}
         <motion.p
-          className="text-handwritten text-2xl md:text-3xl text-dusty-pink max-w-2xl mx-auto leading-relaxed"
+          className="text-handwritten text-2xl md:text-3xl text-dusty-pink max-w-2xl mx-auto leading-relaxed px-4 sm:px-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
