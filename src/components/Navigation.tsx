@@ -74,7 +74,7 @@ export function Navigation() {
   const sections = [
     { id: 'hero', label: '♡' },
     { id: 'story', label: 'Story' },
-    { id: 'memories', label: 'Memories' },
+    { id: 'bouquet', label: 'Bouquet 💐' },
     { id: 'letter', label: 'Letter' },
     { id: 'cake', label: 'Cake' },
     { id: 'reasons', label: 'Reasons' },

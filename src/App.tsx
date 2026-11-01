@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import LockScreen from './components/LockScreen';
 import Hero from './components/Hero';
 import StoryTimeline from './components/StoryTimeline';
-import MemoryGallery from './components/MemoryGallery';
+import BouquetAndChocolates from './components/BouquetAndChocolates';
 import LoveLetter from './components/LoveLetter';
 import BirthdayCake from './components/BirthdayCake';
 import ReasonsILoveYou from './components/ReasonsILoveYou';
@@ -85,8 +85,8 @@ function App() {
 
             <SectionDivider />
 
-            <div id="memories" className="w-full">
-              <MemoryGallery />
+            <div id="bouquet" className="w-full">
+              <BouquetAndChocolates />
             </div>
 
             <SectionDivider />
