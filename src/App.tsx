@@ -14,7 +14,6 @@ import PetalAnimation from './components/PetalAnimation';
 import MusicController from './components/MusicController';
 import { SecretHeart, Navigation } from './components/Navigation';
 import { ClickHearts, ScrollToTop } from './components/ClickEffects';
-import SparkleTrail from './components/SparkleTrail';
 import { useAudio } from './hooks/useHooks';
 
 function App() {
@@ -41,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-cream film-grain flex flex-col items-center justify-start">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-cream flex flex-col items-center justify-start">
       {/* Background audio element anchored directly in DOM */}
       <audio id="birthday-bg-music" src="/audio/music.mp3" loop preload="auto" playsInline />
 
@@ -62,7 +61,7 @@ function App() {
             className="w-full flex flex-col items-center justify-start"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.6 }}
           >
             {/* Persistent background effects */}
             <PetalAnimation />
@@ -70,7 +69,6 @@ function App() {
             <Navigation />
             <ClickHearts />
             <ScrollToTop />
-            <SparkleTrail />
 
             {/* Sections — Full width backgrounds with centered content */}
             <div id="hero" className="w-full">

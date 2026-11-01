@@ -30,21 +30,20 @@ export default function RoseGarden() {
         }}
       />
 
-      {/* Floating butterflies */}
-      {Array.from({ length: 4 }).map((_, i) => (
-        <motion.div
+      {/* Floating butterflies (Optimized GPU animation) */}
+      {Array.from({ length: 3 }).map((_, i) => (
+        <div
           key={i}
-          className="absolute text-2xl pointer-events-none"
-          style={{ left: `${15 + i * 25}%`, top: `${20 + (i % 2) * 30}%` }}
-          animate={{
-            y: [0, -30, -10, -35, 0],
-            x: [0, 20, -10, 15, 0],
-            rotate: [0, 5, -5, 3, 0],
+          className="absolute text-2xl pointer-events-none select-none"
+          style={{
+            left: `${20 + i * 30}%`,
+            top: `${25 + (i % 2) * 25}%`,
+            animation: `butterfly ${7 + i * 2}s ease-in-out infinite`,
+            willChange: 'transform',
           }}
-          transition={{ duration: 8 + i * 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           🦋
-        </motion.div>
+        </div>
       ))}
 
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center w-full">
