@@ -76,8 +76,8 @@ export function Navigation() {
     { id: 'story', label: 'Story' },
     { id: 'memories', label: 'Memories' },
     { id: 'letter', label: 'Letter' },
-    { id: 'quiz', label: 'Quiz' },
     { id: 'cake', label: 'Cake' },
+    { id: 'reasons', label: 'Reasons' },
   ];
 
   const scrollTo = (id: string) => {

@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import StoryTimeline from './components/StoryTimeline';
 import MemoryGallery from './components/MemoryGallery';
 import LoveLetter from './components/LoveLetter';
-import LoveQuiz from './components/LoveQuiz';
 import BirthdayCake from './components/BirthdayCake';
 import ReasonsILoveYou from './components/ReasonsILoveYou';
 import RoseGarden from './components/RoseGarden';
@@ -94,12 +93,6 @@ function App() {
 
             <div id="letter" className="w-full">
               <LoveLetter />
-            </div>
-
-            <SectionDivider />
-
-            <div id="quiz" className="w-full">
-              <LoveQuiz />
             </div>
 
             <SectionDivider />
